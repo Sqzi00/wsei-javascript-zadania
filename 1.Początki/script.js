@@ -1,11 +1,27 @@
-/ Zadanie 1
+// Zadanie 1
 
 console.log("Paweł Skuza");
 
-/ Zadanie 2
+// Zadanie 2
 
 console.log(12 +32);
 console.log(52 / 16);
 console.log(5 * 2);
 
-/ Zadanie 3
+
+// Zadanie 3
+
+console.log("Hello World");
+console.log(Hello World);
+console.log("Hello World);
+
+            
+ // linia 14 - wyświetla string "Hello World"
+// linia 15 - Syntax error - brak znaków "
+// linia 16 - Syntax error - brak znaku "
+
+
+
+
+///
+       
