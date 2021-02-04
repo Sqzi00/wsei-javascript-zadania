@@ -17,7 +17,7 @@ let sum = 0;
 sum = a+b;
 console.log(sum);
 
-// Z A D A N I E  3
+// Zadanie 3
 let x;
 console.log(x);
 //undefined, ponieważ nie ma przypisanej wartości.
