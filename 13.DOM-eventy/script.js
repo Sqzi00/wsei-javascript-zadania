@@ -1,16 +1,27 @@
 //zad 1
-//a
-      document.querySelector('#test-event').addEventListener('click', (event) => console.log(event));
- // b
-      document.addEventListener('mousemove', (event) => console.log(event));
- // c
-      document.querySelector('#test-event').addEventListener('mouseover', (event) => console.log(event));
-  // d
-      document.addEventListener('keypress', (event) => console.log(event));
-  //e
-      document.addEventListener('scroll', (event) => console.log(event));
- // f
-      document.querySelector('#input-test').addEventListener('change', (event) => console.log(event));
+var btn = document.querySelector('#test-event');
+btn.addEventListener("click",function(event){
+   console.log(event.type); 
+});
+btn.addEventListener("mouseover",function(event){
+    console.log(event.type);
+});
+addEventListener("mousemove",function(event){
+    console.log(event.type);
+});
+addEventListener("keypress",function (event){
+    console.log(event.type);
+});
+addEventListener("scroll",function(event){
+    console.log(event.type); 
+});
+document.querySelector('#input-test').addEventListener("change",function(event){
+    console.log(event.type); 
+
+});
+
+
+
       
   //zad 2
   
@@ -38,3 +49,46 @@ myElement.addEventListener('mouseout', (event)=> {
 switchColor();
 
 // zad 4
+const inputError =  document.querySelector('#ex3-err');
+const input = document.querySelector('#input-test');
+input.addEventListener('keyup',(e) =>{
+    const reg = /[0-9]/gm;
+    const checkIfNumber= e.target.value.match(reg);
+    if(checkIfNumber !==null) {
+        inputError.innerText = 'You cannot enter number';
+    } else {
+        inputError.innerText= '';
+
+    }
+    
+});
+// zad 5
+const divEx5 = document.getElementById('ex5');
+const buttonEx5 = document.getElementById('ex5-button');
+let numberOfClick = 0
+buttonEx5.addEventListener('click',function counting(){
+    numberOfClick++
+    if(numberOfClick == 10){
+        buttonEx5.removeEventListener('click',counting)
+    } else {
+        divEx5.innerHTML = numberOfClick
+    }
+});
+
+// zad 6
+
+
+function redChange(){
+    document.addEventListener('scroll',(event)=>{
+        var whereAmI = window.scrollY;
+        var body = document.querySelector('body');
+    if (whereAmI >200 ){
+        body.style.backgroundColor = 'red';
+    }else{ body.style.backgroudColor = 'white';
+ }
+    } );   
+    
+}
+redChange()
+
+// zad 7
