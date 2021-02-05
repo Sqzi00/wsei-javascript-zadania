@@ -25,4 +25,16 @@ function take(){
 take();
 
 // zad 3
+function switchColor(){
+  const myElement =document.getElementById('ex3')  ;
+  myElement.addEventListener('mouseover',(event) => {
+      event.target.style.backgroundColor = 'blue';
 
+  });
+myElement.addEventListener('mouseout', (event)=> {
+    event.target.style.backgroundColor = 'red';
+});
+}
+switchColor();
+
+// zad 4
