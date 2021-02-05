@@ -95,3 +95,37 @@ function addNewClass(obj) {
 addNewClass(saveString('string_z_parametru'));
 
 // zad 9
+function addClass(param){
+    param = parseInt(param);
+    const numbers = document.querySelector("#numbers");
+    if(param%2 ===0){
+        numbers.className="odd";
+    }
+    else{
+        numbers.className = "odd";
+    }
+    }
+    var randomNum = Math.floor(Math.random()* 10);
+    addClass(randomNum)
+// zad 10
+var listValues = document.querySelector('#longList');
+    
+    function showTab(listValues) {
+        var li = [];
+        listValues.querySelectorAll('li').forEach((d) => {
+            li.push(d.innerHTML);
+        });
+        return li;
+    }
+
+    console.log(showTab(listValues));
+// zad 11
+
+function changeValues(el) {
+  [...el.children].forEach(v => {
+    v.setAttribute('old-value', v.innerText);
+    v.innerText = Math.floor(Math.random() * 10);
+  });
+}
+
+changeValues(document.getElementById('longList'));
