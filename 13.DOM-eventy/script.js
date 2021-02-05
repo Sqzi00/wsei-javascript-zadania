@@ -14,3 +14,15 @@
       
   //zad 2
   
+function take(){
+    const buttonEx2 = document.getElementById('ex2')
+    buttonEx2.addEventListener('click',enterText =>{
+        let dataText=enterText.target.dataset.text;
+        let belowElement = eneterText.target.nextElementSibling;
+        belowElement.innerText=dataText
+    } )
+}
+take();
+
+// zad 3
+
